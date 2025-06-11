@@ -47,7 +47,10 @@ try {
     
     // Create application instance
     $app = new Application($config, $database, $session);
-    
+
+    // Make app globally available for controllers
+    $GLOBALS['app'] = $app;
+
     // Initialize router
     $router = new Router();
     
